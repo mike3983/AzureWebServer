@@ -32,9 +32,12 @@ export ARM_CLIENT_SECRET=<YOUR CLIENT SECRET>
 export ARM_SUBSCRIPTION_ID=<YOUR SUBSCRIPTION ID>
 export ARM_TENANT_ID=<YOUR TENANT ID>
 ```
+
+Create a resource group call Azuredevops
+
 **2. Build server image using Packer**
 
-Once in the working directory, run the command `packer init`
+Once in your working directory, run the command `packer init`
 
 Packer will exit without any output. It is ready to build the image.
 
@@ -42,7 +45,7 @@ Build the image using the command `packer build server.json`
 
 Note: you can verify the image using the command `az image list`
 
-**2. Create resources including load balancer using Terraform**
+**3. Create resources including load balancer using Terraform**
 1. `cd` to the Terraform folder
 2. Run `terraform init` to initialise Terraform
 3. Run `terraform plan -out solution.plan` to view what will be created
@@ -77,7 +80,7 @@ Terraform used the selected providers to generate the following execution plan. 
 
 Terraform will perform the following actions:
 
-  # azurerm_availability_set.main will be created
+    azurerm_availability_set.main will be created
   + resource "azurerm_availability_set" "main" {
       + id                           = (known after apply)
       + location                     = "eastus"
@@ -91,7 +94,7 @@ Terraform will perform the following actions:
         }
     }
 
-  # azurerm_lb.main will be created
+    azurerm_lb.main will be created
   + resource "azurerm_lb" "main" {
       + id                   = (known after apply)
       + location             = "eastus"
