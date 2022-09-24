@@ -63,12 +63,12 @@ $ terraform apply
 var.password
   password for VMs
 
-  Enter a value: WordPass@@31
+  Enter a value: ********
 
 var.username
   username for VMs
 
-  Enter a value: mikeg
+  Enter a value: ****
 
 data.azurerm_resource_group.main: Reading...
 data.azurerm_resource_group.main: Read complete after 0s [id=/subscriptions/2576e2a1-0b1e-4545-9622-12ca44208419/resourceGroups/Azuredevops]
@@ -80,7 +80,7 @@ Terraform used the selected providers to generate the following execution plan. 
 
 Terraform will perform the following actions:
 
-    azurerm_availability_set.main will be created
+  # azurerm_availability_set.main will be created
   + resource "azurerm_availability_set" "main" {
       + id                           = (known after apply)
       + location                     = "eastus"
@@ -94,7 +94,7 @@ Terraform will perform the following actions:
         }
     }
 
-    azurerm_lb.main will be created
+  # azurerm_lb.main will be created
   + resource "azurerm_lb" "main" {
       + id                   = (known after apply)
       + location             = "eastus"
