@@ -34,10 +34,8 @@ export ARM_TENANT_ID=<YOUR TENANT ID>
 ```
 **2. Build server image using Packer**
 
-Once in the working directory, run the command
-```bash
-packer init
-```
+Once in the working directory, run the command `packer init`
+
 Packer will exit without any output. It is not ready to build the image.
 
 Build the image using the command `packer build server.json`
